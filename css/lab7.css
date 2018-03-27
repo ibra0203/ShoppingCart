@@ -1,0 +1,342 @@
+*{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+html,body{
+    position: relative;
+    font-size: 16px;
+    line-height: 1.6;
+    min-width: 1024px;
+    min-height: 768px;
+    background-color:#eee;
+    
+    
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+.wrapper{
+    background-color:#c4bdba;
+    margin: auto;
+    padding: auto;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+.wrapper h1{
+    flex-basis: 3%;
+    margin: 2%;
+    text-align: center;
+}
+
+
+.products{
+    background-color:#e2dedc;
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0.5rem;
+    flex-shrink: 0;
+}
+
+.prodInfo{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+   
+    width: 50%;
+    height: 200px;
+    margin: 2% auto;
+    background-color: rgba(255,255,255,0.4);
+    border: 1px solid;
+    overflow: hidden;
+    
+    
+}
+.imgDisplay{
+    position: relative;
+    width: 133px;
+    height: 113px;
+    margin: auto 10px;
+    background-color: white;
+    overflow: hidden;
+    border-style:groove;
+    
+}
+button{
+    border: 3px #ddd;
+    border-style:solid;
+    border-radius: 0.5rem;
+    background-color: #eee;
+}
+.imgDisplay img{
+    margin: auto auto;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.imgDisplay img.visible{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.wrapper .displayBtnWrapper{
+    width: 20rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-basis: 10%;
+    
+    
+}
+.displayBtnWrapper button{
+    flex-basis: auto;
+    width: 8rem;
+    height: 2rem;
+}
+
+.prodCol{
+    
+    flex: column nowrap;
+    height: 100%;
+    flex-basis: 33%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.prodCol:last-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.prodInfo p{
+    
+    padding-top: 10px;
+    text-align:left;
+    color: #60514c;
+    font-size: 0.8rem;
+    font-style: italic;
+    
+      
+}
+#dBrand, #dSubtotal{
+    color: black;
+    padding-top: 15px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.3rem;
+     
+}
+#dPrice{
+    font-weight:1000;
+    font-size: 1rem;
+    
+}
+ .quantity-selector{
+    display: flex;
+    margin: 0 auto;
+    
+    width: 8rem;
+    height: 2.0rem;
+     font-size: 1.5rem;
+}
+.valueButton{
+    position: relative;
+    display: inline-block;
+    margin: 0 0;
+    flex-grow: 1;
+    height: 100%;
+    background-color: #eee;
+    border: 2px solid #ddd;
+    font-size: 1em;
+    line-height: normal;
+    text-align: center;
+  
+    
+}
+.quantity-selector .decrease{
+    border-radius: 30% 0 0 30%;
+    
+}
+.quantity-selector .increase{
+    border-radius: 0 30% 30% 0;
+    
+}
+.valueButton:hover {
+  cursor: pointer;
+}
+
+.qntSelector {
+  
+  display: inline-block;
+  line-height: normal;
+  text-align: center;
+  padding-left: 10%;
+  font-size: 0.7em;
+  border: none;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  margin: 0 0;
+  width: 33%;
+  height: 100%;
+}
+.prodCol button{
+    text-align: center;
+   display: block;
+     margin-top: 5%;
+    width: 7rem;
+    height: 1.8rem;
+     font-size: 0.8rem;
+}
+
+#dSubtotal{
+    font-weight: 100;
+    padding-top: 0;
+    margin-top: 2%;
+    font-size: 1rem;
+    text-align: center;
+    font-style: italic;
+    color:crimson;
+}
+
+.cartWrapper{
+     background-color:#c4bdba;
+    width: 100%;
+    flex-basis: 65%;
+    
+}
+#cart{
+    
+    margin: auto auto;
+    width: 90%;
+    border-collapse: collapse;
+    
+}
+
+#cart th{
+    font-size: 1rem;
+    background-color: #7a6e6c;
+    color: white;
+}
+tr{
+    background-color: #d6cfd3;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+
+#cart td{
+    height: 60px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+td:nth-child(2){
+    width: 80px;
+}
+#cart td:last-child{
+    
+    font-style: italic;
+    font-size: 1.2rem;
+    color:crimson;
+}
+#cart td, #cart th{
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding: 8px;
+    
+}
+
+#cart td img{
+    width: 60px;
+    height: 60px;
+}
+
+.removeBtn{
+    background: url(/img/removeBtn.png) no-repeat;
+    cursor:pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: contain;
+    border-style: none;
+}
+
+tr .quantity-selector
+{
+    margin: 0rem auto;
+    width: 6rem;
+    height: 2.0rem;
+     font-size: 1.5rem;
+}
+
+#error-msg{
+    display: block;
+    margin-top: 0.5rem;
+    text-align: center;
+    color:red;
+    font-size: 1rem;
+    flex-basis: 3%;
+    font-style: italic;
+}
+
+#cart tfoot tr
+{
+    background-color: transparent;   
+    height: 80px;
+}
+#cart tfoot td
+{
+    border-bottom-style: none;
+    
+}
+#cart tfoot td:last-child{
+  
+    position: absolute;
+    
+    padding: 0 0;
+    width:50px
+    
+}
+#cart tfoot img{
+    width: 40px;
+    height: 40px;
+    margin-bottom:0;
+    pointer-events: none;
+    
+}
+
+#clear-button{
+    display: block;
+   float: right;
+    margin-right: 5%;
+    margin-bottom: 0;
+}
+#clear-button:hover{
+     cursor: pointer;
+}
+td#cart-subtotal
+{
+    font-size: 2rem;
+    background-color: #a5969d;
+    color: white;
+
+}
+#clear-button a
+{
+    pointer-events: none;
+
+}

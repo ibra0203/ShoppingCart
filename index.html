@@ -1,0 +1,75 @@
+<html>
+<head>
+ <title>Lab 7</title> 
+ <link rel="stylesheet" href="css/lab7.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Having Fun with JavaScript Events</h1>
+        <div class="products">
+            <h2>Get yourself some gum</h2>
+            
+            <div class="prodInfo"> 
+                
+                <div class="imgDisplay">
+                </div>
+                <div class="prodCol">
+                    <p id="dBrand"></p>
+                    <p>A chewing gum product</p>
+                    <p id="dPrice"></p>
+                </div>
+                <div class="prodCol">
+                    <p id="dSubtotal"></p>
+                    <form class="quantity-selector" id="productQTN">
+                        <div class="valuebutton decrease" onclick="">-</div>
+                        <input type="number" class="qntSelector" value="1" min="1" readonly/>
+                        <div class="valuebutton increase" onclick="">+</div>
+                    </form>
+                    <button type="button" id="add-price">Add To Cart</button>
+                    
+                </div>
+            </div>
+            <div class="displayBtnWrapper">
+                <button type="button" class="prod-nav-btn" data-dir="-1">Previous item</button>
+                <button type="button" class="prod-nav-btn" data-dir="1">Next item</button>
+            </div>
+        </div>
+        <div class="cartWrapper">
+            <p id="error-msg"> </p>
+            <table id="cart">
+                <thead>
+                    <tr>
+                        <th>Remove</th>
+                        <th></th>
+                        <th>Brand</th>
+                        <th>Unit Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td id="cart-subtotal">C$1.00</td>
+                        <td>
+                            <button type="submit" id="clear-button" style="border: 0; background: transparent">
+                                <img src="img/trashcan.png"/>
+                                <br/><a>Clear Cart</a>
+                            </button>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+        
+    <script src="scripts/lab7.js"></script>
+</body>
+</html>
