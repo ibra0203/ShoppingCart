@@ -171,7 +171,7 @@ var shopping = ( function()
                _html=" "
                tdStart = "<td>";
                 tdEnd="</td>";
-                _html += tdStart + "<input type=\"button\" class=\"removeBtn\" value=\"\">"+tdEnd;
+                _html += tdStart + "<a href=\"\" class=\"removeBtn\" ><img src =\"img/removeBtn.png\"> </a>"+tdEnd;
                 _html +=tdStart + "<img src=\"" +imgPath+_item.img+"\">"+tdEnd;
                 mid =_item.brand; 
                 _html+=tdStart+mid+tdEnd;    
@@ -259,9 +259,9 @@ var inputHandler = ( function()
                         shopping.removeItem(e.target);
 
                     if(_class =="valuebutton decrease" )
-                        displayHandler.changeQtn(-1);
+                        displayHandler.changeQtn(e, -1);
                     else if(_class =="valuebutton increase")
-                        displayHandler.changeQtn(1);
+                        displayHandler.changeQtn(e, 1);
                     
                     if(_class=="prod-nav-btn")
                     {
@@ -318,9 +318,9 @@ var displayHandler = ( function()
             {
                 this.resetQtn();
             },
-            changeQtn: function(amount)
+            changeQtn: function(evnt, amount)
             {
-                var _num = event.target.parentElement.getElementsByTagName("INPUT")[0];
+                var _num = evnt.target.parentElement.getElementsByTagName("INPUT")[0];
                 var _newNum;
                 if(parseInt(_num.value) +amount < minQtn)
                 {
@@ -339,7 +339,7 @@ var displayHandler = ( function()
 
                 _num.value = _newNum;
 
-                var _parent = event.target.parentElement;
+                var _parent = evnt.target.parentElement;
                 if(_parent.id == "productQTN")
                 {
 
